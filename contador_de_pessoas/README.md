@@ -1,6 +1,6 @@
 # contador_de_pessoas
 
-Um aplicativo para contar pessoas
+A app to count people
 
 ## Getting Started
 
