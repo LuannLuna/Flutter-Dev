@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>1459841216-7c15t4i05u7v6dmgjglnt21ugfr03if5.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.1459841216-7c15t4i05u7v6dmgjglnt21ugfr03if5</string>
+	<key>ANDROID_CLIENT_ID</key>
+	<string>1459841216-qgbnc0uj2ltcikhehf0tm8qgpan3sd6n.apps.googleusercontent.com</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAib-AbQHxQElCYILFQM8O7xKjM19MKhfk</string>
+	<key>GCM_SENDER_ID</key>
+	<string>1459841216</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>br.com.luannluna.chatOnline</string>
+	<key>PROJECT_ID</key>
+	<string>chatonlinefluuter</string>
+	<key>STORAGE_BUCKET</key>
+	<string>chatonlinefluuter.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:1459841216:ios:9f3526f72ca011fd</string>
+	<key>DATABASE_URL</key>
+	<string>https://chatonlinefluuter.firebaseio.com</string>
+</dict>
+</plist>
