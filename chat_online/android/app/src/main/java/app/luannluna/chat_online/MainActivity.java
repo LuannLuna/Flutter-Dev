@@ -1,4 +1,4 @@
-package br.com.luannluna.chat_online;
+package app.luannluna.chat_online;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

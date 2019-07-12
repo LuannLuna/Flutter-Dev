@@ -1,8 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:google_sign_in/google_sign_in.dart';
-import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 
 void main() {
   runApp(MyApp());
@@ -14,35 +13,18 @@ final ThemeData kIOSTheme = ThemeData(
   primaryColorBrightness: Brightness.light
 );
 
-final ThemeData kDefaultTheme = ThemeData(
+final ThemeData kDefault = ThemeData(
   primarySwatch: Colors.purple,
   accentColor: Colors.orangeAccent[400],
 );
-
-final googleSignIn = GoogleSignIn();
-final auth = FirebaseAuth.instance;
-
-Future<Null> _ensureLoggedIn() async {
-  GoogleSignInAccount user = googleSignIn.currentUser;
-  if (user == null) user = await googleSignIn.signInSilently();
-
-  if (user == null)  user = await googleSignIn.signIn();
-
-  if (await auth.currentUser() == null) {
-    GoogleSignInAuthentication credentials = await googleSignIn.currentUser.authentication;
-    await auth.signInWithCredential(
-        GoogleAuthProvider.getCredential(idToken: credentials.idToken, accessToken: credentials.accessToken)
-    );
-  }
-}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: "Chat App",
+      title: "Chat Online Firebase",
       debugShowCheckedModeBanner: false,
-      theme: Theme.of(context).platform == TargetPlatform.iOS ? kIOSTheme : kDefaultTheme,
+      theme: Theme.of(context).platform == TargetPlatform.iOS ? kIOSTheme : kDefault,
       home: ChatScreen(),
     );
   }
@@ -81,19 +63,21 @@ class _ChatScreenState extends State<ChatScreen> {
   }
 }
 
+
 class TextComposer extends StatefulWidget {
   @override
   _TextComposerState createState() => _TextComposerState();
 }
 
 class _TextComposerState extends State<TextComposer> {
+
   bool _isComposing = false;
 
   @override
   Widget build(BuildContext context) {
     return IconTheme(
       data: IconThemeData(
-        color: Theme.of(context).accentColor,
+        color: Theme.of(context).accentColor
       ),
       child: Container(
         margin: const EdgeInsets.symmetric(horizontal: 8.0),
@@ -110,69 +94,26 @@ class _TextComposerState extends State<TextComposer> {
                 decoration: InputDecoration.collapsed(hintText: "Enviar uma mensagem"),
                 onChanged: (text){
                   setState(() {
-                    _isComposing = text.isNotEmpty;
+                    _isComposing = text.length > 0;
                   });
                 },
               ),
             ),
-            Expanded(
-              child: ListView(
-                children: <Widget>[
-                  ChatMessage(),
-                  ChatMessage(),
-                  ChatMessage()
-                ],
-              ),
-            ),
-            Divider(
-              height: 1.0,
-            ),
             Container(
               margin: const EdgeInsets.symmetric(horizontal: 4.0),
-              child: Theme.of(context).platform == TargetPlatform.iOS ? CupertinoButton(
+              child: Theme.of(context).platform == TargetPlatform.iOS ?
+              CupertinoButton(
                 child: Text("Enviar"),
                 onPressed: _isComposing ? () {} : null,
-              ) : IconButton(
+              )
+              : IconButton(
                 icon: Icon(Icons.send),
+                onPressed: _isComposing ? () {} : null,
               ),
-            )
+            ),
           ],
         ),
       ),
     );
   }
 }
-
-class ChatMessage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      margin: const EdgeInsets.symmetric(vertical: 10.0, horizontal: 10.0),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: <Widget>[
-          Container(
-            margin: const EdgeInsets.only(right: 16.0),
-            child: CircleAvatar(
-              backgroundImage: NetworkImage(""),
-            ),
-          ),
-          Expanded(
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: <Widget>[
-                Text("", style: Theme.of(context).textTheme.subhead,),
-                Container(
-                  margin: const EdgeInsets.only(top: 5.0),
-                  child: Text(""),
-                )
-              ],
-            ),
-          )
-        ],
-      ),
-    );
-  }
-}
-
-

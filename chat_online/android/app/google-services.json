@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "1459841216",
+    "firebase_url": "https://chatonlinefluuter.firebaseio.com",
+    "project_id": "chatonlinefluuter",
+    "storage_bucket": "chatonlinefluuter.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1459841216:android:65b66a232f604f72",
+        "android_client_info": {
+          "package_name": "app.luannluna.chat_online"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1459841216-io2nvvlevit3jkicgo5duir4jkd5h3if.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "app.luannluna.chat_online",
+            "certificate_hash": "d5b83e9126a51723abc75c920ec46c9ca64f6f5b"
+          }
+        },
+        {
+          "client_id": "1459841216-ete7lemcv5iemad69up84gjchdl0ilag.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBTTCU-JiigC9hpZ-2JYfrpQhhNp3ZQnFE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1459841216-ete7lemcv5iemad69up84gjchdl0ilag.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1459841216-7c15t4i05u7v6dmgjglnt21ugfr03if5.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "br.com.luannluna.chatOnline"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

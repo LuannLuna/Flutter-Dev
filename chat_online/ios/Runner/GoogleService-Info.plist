@@ -3,11 +3,11 @@
 <plist version="1.0">
 <dict>
 	<key>CLIENT_ID</key>
-	<string>1459841216-7c15t4i05u7v6dmgjglnt21ugfr03if5.apps.googleusercontent.com</string>
+	<string>1459841216-pdogc5pf2662o7a7f08pe9j5ope4hmbg.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.1459841216-7c15t4i05u7v6dmgjglnt21ugfr03if5</string>
+	<string>com.googleusercontent.apps.1459841216-pdogc5pf2662o7a7f08pe9j5ope4hmbg</string>
 	<key>ANDROID_CLIENT_ID</key>
-	<string>1459841216-qgbnc0uj2ltcikhehf0tm8qgpan3sd6n.apps.googleusercontent.com</string>
+	<string>1459841216-io2nvvlevit3jkicgo5duir4jkd5h3if.apps.googleusercontent.com</string>
 	<key>API_KEY</key>
 	<string>AIzaSyAib-AbQHxQElCYILFQM8O7xKjM19MKhfk</string>
 	<key>GCM_SENDER_ID</key>
@@ -15,7 +15,7 @@
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>br.com.luannluna.chatOnline</string>
+	<string>app.luannluna.chatOnline</string>
 	<key>PROJECT_ID</key>
 	<string>chatonlinefluuter</string>
 	<key>STORAGE_BUCKET</key>
@@ -31,7 +31,7 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:1459841216:ios:9f3526f72ca011fd</string>
+	<string>1:1459841216:ios:2ba57129d0cbf665</string>
 	<key>DATABASE_URL</key>
 	<string>https://chatonlinefluuter.firebaseio.com</string>
 </dict>
