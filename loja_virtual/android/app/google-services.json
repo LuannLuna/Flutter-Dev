@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "57731503269",
+    "firebase_url": "https://loja-flutter-242d6.firebaseio.com",
+    "project_id": "loja-flutter-242d6",
+    "storage_bucket": "loja-flutter-242d6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:57731503269:android:ebe00bf15a1c12e1",
+        "android_client_info": {
+          "package_name": "app.luannluna.loja_virtual"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "57731503269-irq75l20597tjeeut4dr258klivfdc68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCFXCr1oQrqSMqErNQn2I4zIc9HvhZR6aQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "57731503269-irq75l20597tjeeut4dr258klivfdc68.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
