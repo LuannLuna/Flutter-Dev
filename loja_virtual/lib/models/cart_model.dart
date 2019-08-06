@@ -12,6 +12,9 @@ class CartModel extends Model {
 
   List<CartProduct> products = [];
 
+  String couponCodde;
+  int discountPercentage = 0;
+
   bool isLoading = false;
 
   CartModel(this.user){
@@ -64,6 +67,32 @@ class CartModel extends Model {
   void updatePrices(){
     notifyListeners();
   }
+
+  void setCoupon(String couponCode, int discountPercentage) {
+    this.couponCodde = couponCode;
+    this.discountPercentage = discountPercentage;
+  }
+
+  double getProductsPrice() {
+    double price = 0.0;
+    for(CartProduct c in products) {
+      if(c.productData!=null) {
+        price += c.quantity * c.productData.price;
+      }
+    }
+
+    return price;
+  }
+
+  double getDiscount() {
+    return getProductsPrice() * discountPercentage / 100;
+  }
+
+  double getShipPrice() {
+    return 9.99;
+  }
+
+
 
   void _loadCartItems() async {
 
