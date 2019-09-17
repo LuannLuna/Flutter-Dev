@@ -10,15 +10,16 @@ class ProductsTab extends StatelessWidget {
       builder: (context, snapshot) {
         if (!snapshot.hasData) {
           return Center(child: CircularProgressIndicator(),);
-        } else {
-
+        } if (snapshot.data != null) {
           var dividedTiles = ListTile.divideTiles(tiles: snapshot.data.documents.map((doc){
             return CategoryTile(doc);
-          }).toList(), color: Colors.grey[500]).toList();
+          }).toList(), color: Colors.grey[500], context: context).toList();
 
           return ListView(
             children: dividedTiles,
           );
+        } else {
+          return Center(child: Text("Fail load products"),);
         }
       },
     );
